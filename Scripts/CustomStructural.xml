@@ -1,0 +1,60 @@
+<extension version="1" name="CustomStructural" icon="images\custom_structural_extension.png">
+    <guid shortid="CustomStructural">69d0095b-e138-4841-a13a-de12238c85f9</guid>
+    <script src="main.py" />
+    <interface context="Project">
+        <images>images</images>
+    </interface>
+      <workflow name="wf6" context="Project" caption="Siemens WP Workflows" version="1">
+         <callbacks>
+			<!--<onaftertaskcreation>onAfterCreate</onaftertaskcreation>-->
+		 </callbacks>
+		 <tasks>
+            <task caption="Object Test" icon="wheel" name="ObjectTest" version="1">
+                <callbacks>
+                    <onupdate>update</onupdate>
+					<oninitialize>taskinit</oninitialize>
+				</callbacks>
+                <property name="NumberOfSteps" caption="Input file" control="fileopen" default="C:\Users\1990erol.CONNECT365\Desktop\Siemens\App\script\input.txt" readonly="False" needupdate="true" visible="True" persistent="True" isparameter="False">
+                    <callbacks>
+                        <!-- initializing the object -->
+                       <oninit>OnInit</oninit>
+                    </callbacks>
+                </property>
+                <inputs>
+                    <input/>
+                </inputs>
+                <outputs/>
+            </task>
+        <task caption="Object Test" icon="data" name="DataOut" version="1">
+                <callbacks>
+                    <onupdate>update</onupdate>
+                </callbacks>
+                <property name="NumberOfSteps1" caption="Output directory" control="folderopen" default="C:\Users\1990erol.CONNECT365\Desktop\Siemens\App\script\" readonly="False" needupdate="true" visible="True" persistent="True" isparameter="False">
+                    <callbacks>
+                        <!-- initializing the object -->
+                       <!--<oninit>initObject2</oninit>-->
+                    </callbacks>
+                </property>
+				<property name="NumberOfSteps2" caption="File type filter" control="string" default="rst; jpg;" readonly="False" needupdate="true" visible="True" persistent="True" isparameter="False">
+                    <callbacks>
+                        <!-- initializing the object -->
+                       <!--<oninit>initObject2</oninit>-->
+                    </callbacks>
+                </property>
+				<property name="DeleteDPs" caption="Clean up project files" control="boolean" default="True" readonly="False" needupdate="true" visible="True" persistent="True" isparameter="False">
+                </property>
+				<inputs>
+                    <input/>
+                </inputs>
+                <outputs/>
+            </task>
+		</tasks>
+		<taskgroups>
+            <taskgroup name="CustomStructural" caption="APDL submit" icon="custom_structural" category="Siemens WP Workflows" abbreviation="CSTRUCT" version="1">
+				<includeTask caption="Submission settings" name="ObjectTest"/>
+				<includeTask external="True" name="ANSYSSetupCellTemplate" caption="Mechanical APDL"/>
+				<includeTask caption="Result data transfer" name="DataOut"/>
+			</taskgroup>
+        </taskgroups>
+	  </workflow>
+</extension>

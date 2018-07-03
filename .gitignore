@@ -1,7 +1,14 @@
-# Windows thumbnail cache files
+# Ansys files - GitHub does not accept files bigger then 25Mb
+*.wbpz
+*.wbpj
+dp*
+.*
+old
+
+
+# Windows image file caches
 Thumbs.db
 ehthumbs.db
-ehthumbs_vista.db
 
 # Folder config file
 Desktop.ini
@@ -21,3 +28,29 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+CFDApp_UVreactor_v01/CFD tool configuration.xlsm
+*.wbjn
+CFDApp_UVreactor_v01/CFDApp_UVreactor_files/session_files/journal5.wbjn
+Scripts/IronPythonApplication1/IronPythonApplication1.sln
+*.suo
