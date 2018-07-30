@@ -1,0 +1,225 @@
+/BATCH  
+/COM,ANSYS RELEASE Release 19.1      BUILD 19.1      UP20180418       10:25:35
+/input,menust,tmp,''
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+/REPLOT,RESIZE  
+/REPLOT,RESIZE  
+/REPLOT,RESIZE  
+/PREP7  
+!*  
+ET,1,SHELL181   
+!*  
+!*  
+!*  
+!*  
+!*  
+!*  
+!*  
+!*  
+!*  
+!*  
+!*  
+!*  
+!*  
+!*  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,EX,1,,2.10E9 
+MPDATA,PRXY,1,,0,3  
+MPDE,PRXY,1 
+/REPLOT,RESIZE  
+/REPLOT,RESIZE  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDE,EX,1   
+MPDATA,EX,1,,2.10E9 
+MPDATA,PRXY,1,,0.3  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,DENS,1,,7850 
+BLC4,0,0,20,100 
+AATT,       1, ,   1,       0,  
+AATT,       1, ,   1,       0,  
+AATT,       1, ,   1,       0,  
+AATT,       1, ,   1,       0,  
+CM,_Y,AREA  
+ASEL, , , ,       1 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+!*  
+CMSEL,S,_Y1 
+AATT,       1, ,   1,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+!*  
+MSHAPE,0,2D 
+MSHKEY,0
+!*  
+/DIST,1,0.729,1 
+/REP,FAST   
+EPLOT   
+EPLOT   
+/GRAPHICS,FULL  
+EPLOT   
+APLOT   
+/REPLOT,RESIZE  
+/REPLOT,RESIZE  
+AATT,       1, ,   1,       0,  
+AATT,       1, ,   1,       0,  
+/UI,MESH,OFF
+CM,_Y,AREA  
+ASEL, , , ,       1 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+!*  
+CMSEL,S,_Y1 
+AATT,       1, ,   1,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+!*  
+CM,_Y,AREA  
+ASEL, , , ,       1 
+CM,_Y1,AREA 
+CHKMSH,'AREA'   
+CMSEL,S,_Y  
+!*  
+MSHKEY,1
+AMESH,_Y1   
+MSHKEY,0
+!*  
+CMDELE,_Y   
+CMDELE,_Y1  
+CMDELE,_Y2  
+!*  
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/USER,  1   
+/DIST,  1,   29.7418293100  
+/ANG,   1,  -71.4000000000  
+/REPLO  
+/VIEW,  1,  0.605910401960    , -0.698080090680    ,  0.381519032020
+/ANG,   1,  -68.8020272890  
+/REPLO  
+FINISH  
+/SOL
+FLST,2,1,5,ORDE,1   
+FITEM,2,1   
+/GO 
+!*  
+SFA,P51X,1,PRES,100 
+!*  
+!*  
+ANTYPE,0
+FINISH  
+/PREP7  
+FINISH  
+/SOL
+FLST,2,1,4,ORDE,1   
+FITEM,2,1   
+!*  
+/GO 
+DL,P51X, ,ALL,  
+FLST,2,1,4,ORDE,1   
+FITEM,2,3   
+WPSTYLE,,,,,,,,1
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST,  1,   43.8050801005  
+/ANG,   1,  -68.2020272890  
+/REPLO  
+FLST,2,1,4,ORDE,1   
+FITEM,2,3   
+!*  
+/GO 
+DL,P51X, ,UX,   
+FLST,2,1,4,ORDE,1   
+FITEM,2,3   
+!*  
+/GO 
+DL,P51X, ,UZ,   
+FINISH  
+/PREP7  
+!*  
+sect,1,shell,,1ply  
+secdata, 5,1,0.0,3  
+secoffset,MID   
+seccontrol,,,, , , ,
+SECPLOT,   1,,, 
+SECPLOT,   1,,, 
+SECPLOT,   1,,, 
+eplot   
+FINISH  
+/SOL
+FINISH  
+/PREP7  
+FINISH  
+/SOL
+/STATUS,SOLU
+SOLVE   
+FINISH  
+/POST1  
+SET,FIRST   
+SET,LAST
+SET,LAST
+!*  
+/EFACET,1   
+PLNSOL, U,SUM, 0,1.0
+/EFACET,1   
+PLNSOL, U,SUM, 0,1.0
+SAVE
+FINISH  
+! /EXIT,MODEL   
+/BATCH  
+/COM,ANSYS RELEASE Release 19.1      BUILD 19.1      UP20180418       08:46:41
+/input,menust,tmp,''
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+FINISH  
+! /EXIT,NOSAV   

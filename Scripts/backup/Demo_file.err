@@ -1,0 +1,16 @@
+/COM,ANSYS RELEASE Release 19.1      BUILD 19.1      UP20180418       10:25:32
+
+ *** WARNING ***                         CP =       3.656   TIME= 10:27:36
+ Material property table exceeds the number of defined temperatures.     
+  Number of temperatures is 1.  The number of data values is 2.          
+
+ *** WARNING ***                         CP =       7.953   TIME= 10:30:56
+ The EPLOT command cannot be executed.  The selected elements cannot be  
+ displayed by PowerGraphics.  To correct this situation, select          
+ different elements or turn off PowerGraphics.                           
+
+ *** WARNING ***                         CP =       8.031   TIME= 10:31:08
+ The EPLOT command cannot be executed.  The selected elements cannot be  
+ displayed by PowerGraphics.  To correct this situation, select          
+ different elements or turn off PowerGraphics.                           
+/COM,ANSYS RELEASE Release 19.1      BUILD 19.1      UP20180418       08:46:39
