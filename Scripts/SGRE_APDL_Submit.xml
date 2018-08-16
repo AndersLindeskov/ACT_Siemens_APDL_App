@@ -1,4 +1,4 @@
-<extension version="1" name="SGRE_APDL_Submit" icon="images\sg-logo-petrol-rgb.png">
+<extension version="2" name="SGRE_APDL_Submit" icon="images\Logo_SG.png">
     <guid shortid="SGRE_APDL_Submit">fc9d3606-bb55-8f0f-8336-fc264ec82976</guid>
 	<script src="main.py"/>
     <interface context="Project">
@@ -71,7 +71,7 @@
 				</task>			
 			</tasks>
 			<taskgroups>
-				<taskgroup name="CustomStructural" caption="APDL submit" icon="sg-logo-petrol-rgb" category="SGRE Workflows" abbreviation="CSTRUCT" version="1">
+				<taskgroup name="CustomStructural" caption="APDL submit" icon="Logo_SG" category="SGRE Workflows" abbreviation="CSTRUCT" version="1">
 					<includeTask caption="Submission settings" name="Input"/>
 					<includeTask external="True" name="ANSYSSetupCellTemplate" caption="Mechanical APDL"/>
 					<includeTask caption="Result data transfer" name="DataOut"/>

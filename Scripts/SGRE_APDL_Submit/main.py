@@ -14,6 +14,8 @@ from Ansys.UI.Toolkit import *
 filepath = ""
 activedirc = '.'
 errors = []
+version = 2.01b
+status = "released"
 
 class Settings:
 	def __init__(self):
@@ -23,7 +25,9 @@ class Settings:
 
 def __init__(context):
 	setting = Settings()	
-	ExtAPI.Log.WriteMessage("Init CustomStructural...")
+	ExtAPI.Log.WriteMessage("Init SGRE Workflow, version:" + str(version) + " ,Status:" + str(status))
+	ExtAPI.Log.WriteMessage("Program created by: EDRmedeso Aps. Jul18,Tech/AFL")
+	ExtAPI.Log.WriteMessage("MD5> fc9d3606-bb55-8f0f-8336-fc264ec82976")
 	return True
 
 #-------------Input -----------------------------
