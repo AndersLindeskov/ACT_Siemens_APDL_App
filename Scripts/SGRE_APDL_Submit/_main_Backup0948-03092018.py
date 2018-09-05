@@ -33,7 +33,6 @@ def __init__(context):
 #-------------Input -----------------------------
 	
 def updateInput(task):
-	global filepath
 	""" Running these lines of code when the update task in WB is activated.
 		The aggrument task is a UserTask
 	"""	
@@ -42,8 +41,7 @@ def updateInput(task):
 	if 'Input' in task.Name: 		
 		ExtAPI.Log.WriteMessage('Updating the Input task')
 		
-		inputfilepath = task.Properties['SelectInputAPDLFile'].Value
-		filepath = System.IO.Path.GetDirectoryName(inputfilepath)	
+		inputfilepath = task.Properties['SelectInputAPDLFile'].Value	
 		inputReferencePath = task.Properties[1].Properties['SelectReferenceAPDLdir'].Value
 		inputRefFilters = task.Properties[1].Properties['RefFileFilter'].Value
 
@@ -75,7 +73,7 @@ def updateInput(task):
 			filtersList = inputRefFilters.split(';')
 
 			#Starts the copying of the Outputfiles	
-			if not copyFiles(filtersList, inputReferencePath, APDLfilePath, False, [inputfilepath], False, filepath, system1):
+			if not copyFiles(filtersList, inputReferencePath, APDLfilePath, False, [inputfilepath], False):
 				ExtAPI.Log.WriteMessage('Error: Error ourcurred in Copying of reference files')
 				return False
 
@@ -361,7 +359,7 @@ def filterCheck(property, filterString=['all']):
 	else:		
 		return True
 
-def copyFiles(filtersList, InDirc, OutDirc, DeleteFiles=False, FilesNot2Copy=[], symlinks=False, iniFilepath="", system1=None):	
+def copyFiles(filtersList, InDirc, OutDirc, DeleteFiles=False, FilesNot2Copy=[], symlinks=False):	
 	#Copying of files 		
 	files = os.listdir(InDirc)	
 	#for (path, dirc, files) in os.walk(InDirc):
@@ -413,14 +411,9 @@ def copyFiles(filtersList, InDirc, OutDirc, DeleteFiles=False, FilesNot2Copy=[],
 			else:
 				#copying files in stored list
 				if System.IO.File.Exists(fullPath_source):
-					if System.IO.Path.GetFullPath(System.IO.Path.GetDirectoryName(fullPath_source)) == filepath:
-						setup1 = system1.GetContainer(ComponentName="Setup")
-						reffile = setup1.AddFile(FilePath=fullPath_source)
-						ExtAPI.Log.WriteMessage('Info: Reffile: ' + fullPath_source + ' Added to MAPDL Task:')	
-					else:
-						System.IO.File.Copy(fullPath_source, fullPath_target)				
-						#copy2(fullPath_source, fullPath_target)
-						ExtAPI.Log.WriteMessage('Info: file copied:')	
+					System.IO.File.Copy(fullPath_source, fullPath_target)				
+					#copy2(fullPath_source, fullPath_target)
+					ExtAPI.Log.WriteMessage('Info: file copied:')	
 				
 				#Deleting Source file in Dp0
 				if DeleteFiles:

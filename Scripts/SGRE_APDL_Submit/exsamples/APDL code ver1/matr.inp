@@ -1,0 +1,18 @@
+!* AMSYS Material script
+!* Shifting to the Preprocessing routines 
+/PREP7
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,EX,1,,2.10E9 
+MPDATA,PRXY,1,,0,3  
+MPDE,PRXY,1 
+/REPLOT,RESIZE  
+/REPLOT,RESIZE  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDE,EX,1   
+MPDATA,EX,1,,2.10E9 
+MPDATA,PRXY,1,,0.3  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,DENS,1,,7850 

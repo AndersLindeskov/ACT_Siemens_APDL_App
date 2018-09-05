@@ -1,4 +1,4 @@
-<extension version="2" name="SGRE_APDL_Submit" icon="images\Logo_SG.png">
+<extension version="1" name="SGRE_APDL_Submit" icon="images\Logo_SG.png">
     <guid shortid="SGRE_APDL_Submit">fc9d3606-bb55-8f0f-8336-fc264ec82976</guid>
 	<script src="main.py"/>
     <interface context="Project">
